@@ -21,7 +21,7 @@ This project delivers a Java 21 CLI application that streams large CSV files, ag
   2. User can run the JAR with --input and --output flags and the application accepts them without error
   3. User receives a clear error message when required arguments are missing or the input file does not exist
   4. The output directory is created automatically if it does not exist
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 01-01-PLAN.md — Initialize Gradle project with dependencies, shadow plugin, and fat JAR packaging
@@ -59,6 +59,6 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Setup and CLI Skeleton | 2/2 | Complete | 2026-04-24 |
+| 1. Project Setup and CLI Skeleton | 2/2 | Complete    | 2026-04-24 |
 | 2. CSV Streaming and Aggregation | 0/1 | Not started | - |
 | 3. Ranked Output and Performance Validation | 0/1 | Not started | - |
