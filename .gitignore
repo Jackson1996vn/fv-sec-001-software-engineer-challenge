@@ -9,3 +9,6 @@ build/
 *.iml
 .vscode/
 .DS_Store
+*.csv
+*.csv.zip
+results/

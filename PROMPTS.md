@@ -95,25 +95,6 @@ During the GSD workflow, I answered several interactive questions:
 
 ---
 
-## Prompt 9: Create PROMPTS.md
-
-```
-last step I want to summarize all I promtted to the PROMPTS.md If you use AI coding assistants:
-Please include a PROMPTS.md file in the root of your repository. This helps us understand:
-
-How you break down problems
-Your communication with AI tools
-Your problem-solving approach
-Requirements for PROMPTS.md:
-
-Must be a file named exactly PROMPTS.md (no other format accepted)
-Paste your prompts as-is — raw, unedited, exactly as you typed them
-Do not clean up, polish, or rewrite your prompts before submitting
-This is not mandatory but highly valued as it demonstrates your ability to effectively leverage modern development tools.
-```
-
----
-
 ## Summary of Approach
 
 1. **Single detailed prompt** described the full problem: input schema, aggregation logic, output format, performance requirements, and CLI interface
