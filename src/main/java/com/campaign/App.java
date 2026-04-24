@@ -7,7 +7,9 @@ import picocli.CommandLine.Option;
 import picocli.CommandLine.Spec;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
 import java.util.concurrent.Callable;
 
 @Command(
@@ -59,7 +61,24 @@ public class App implements Callable<Integer> {
 
         out.println("Input: " + inputFile.getPath());
         out.println("Output: " + outputDir.getPath());
-        out.println("Ready to process. (Processing not yet implemented)");
+
+        try {
+            Map<String, CampaignMetrics> results = CsvProcessor.process(inputFile);
+            out.println("Processed " + results.size() + " campaigns.");
+
+            for (Map.Entry<String, CampaignMetrics> entry : results.entrySet()) {
+                String id = entry.getKey();
+                CampaignMetrics m = entry.getValue();
+                String cpaStr = m.getCpa() != null ? String.format("%.2f", m.getCpa()) : "N/A";
+                out.printf("  %s: impressions=%d, clicks=%d, spend=%.2f, conversions=%d, CTR=%.4f, CPA=%s%n",
+                    id, m.getTotalImpressions(), m.getTotalClicks(), m.getTotalSpend(),
+                    m.getTotalConversions(), m.getCtr(), cpaStr);
+            }
+        } catch (IOException | IllegalArgumentException e) {
+            err.println("Error processing CSV: " + e.getMessage());
+            return 1;
+        }
+
         return 0;
     }
 
