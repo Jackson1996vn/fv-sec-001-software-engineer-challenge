@@ -36,10 +36,11 @@ Plans:
   2. Application correctly sums impressions, clicks, spend, and conversions per campaign_id across multiple date rows
   3. Application computes CTR (clicks/impressions) and CPA (spend/conversions) correctly for each campaign
   4. Campaigns with zero total conversions have CPA excluded (null), not divided-by-zero
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 02-01: TBD
+- [x] 02-01-PLAN.md — CampaignMetrics accumulator and CsvProcessor streaming parser with TDD
+- [ ] 02-02-PLAN.md — Wire CsvProcessor into App.java CLI with integration tests
 
 ### Phase 3: Ranked Output and Performance Validation
 **Goal**: Application produces correctly ranked top-10 CSV output files and handles gigabyte-scale input without memory issues
@@ -60,5 +61,5 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Setup and CLI Skeleton | 2/2 | Complete    | 2026-04-24 |
-| 2. CSV Streaming and Aggregation | 0/1 | Not started | - |
+| 2. CSV Streaming and Aggregation | 1/2 | In progress | - |
 | 3. Ranked Output and Performance Validation | 0/1 | Not started | - |

@@ -12,7 +12,8 @@ Correctly aggregate campaign metrics from a large CSV and produce accurate top-1
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ CLI interface with --input and --output flags — Phase 1
+- ✓ Packaged as executable JAR: `java -jar app.jar --input input.csv --output results/` — Phase 1
 
 ### Active
 
@@ -22,8 +23,6 @@ Correctly aggregate campaign metrics from a large CSV and produce accurate top-1
 - [ ] Handle CPA edge case: if total_conversions = 0, CPA is null/excluded
 - [ ] Output top10_ctr.csv: top 10 campaigns ranked by highest CTR
 - [ ] Output top10_cpa.csv: top 10 campaigns ranked by lowest CPA, excluding zero-conversion campaigns
-- [ ] CLI interface with --input and --output flags
-- [ ] Packaged as executable JAR: `java -jar app.jar --input input.csv --output results/`
 - [ ] Memory-efficient processing suitable for 1GB+ files
 - [ ] Good performance on large datasets
 
@@ -78,4 +77,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-24 after initialization*
+*Last updated: 2026-04-24 after Phase 1 completion*

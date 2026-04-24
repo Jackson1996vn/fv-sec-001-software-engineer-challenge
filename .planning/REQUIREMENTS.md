@@ -7,19 +7,19 @@
 
 ### CSV Parsing
 
-- [ ] **CSV-01**: Application reads a CSV file from a path specified via --input flag
-- [ ] **CSV-02**: Application streams CSV rows without loading the entire file into memory
-- [ ] **CSV-03**: Application correctly parses all columns: campaign_id, date, impressions, clicks, spend, conversions
+- [x] **CSV-01**: Application reads a CSV file from a path specified via --input flag
+- [x] **CSV-02**: Application streams CSV rows without loading the entire file into memory
+- [x] **CSV-03**: Application correctly parses all columns: campaign_id, date, impressions, clicks, spend, conversions
 
 ### Aggregation
 
-- [ ] **AGG-01**: Application groups rows by campaign_id and computes total_impressions (sum)
-- [ ] **AGG-02**: Application groups rows by campaign_id and computes total_clicks (sum)
-- [ ] **AGG-03**: Application groups rows by campaign_id and computes total_spend (sum)
-- [ ] **AGG-04**: Application groups rows by campaign_id and computes total_conversions (sum)
-- [ ] **AGG-05**: Application computes CTR = total_clicks / total_impressions per campaign
-- [ ] **AGG-06**: Application computes CPA = total_spend / total_conversions per campaign
-- [ ] **AGG-07**: Application handles CPA edge case: returns null/excludes campaigns with zero total_conversions
+- [x] **AGG-01**: Application groups rows by campaign_id and computes total_impressions (sum)
+- [x] **AGG-02**: Application groups rows by campaign_id and computes total_clicks (sum)
+- [x] **AGG-03**: Application groups rows by campaign_id and computes total_spend (sum)
+- [x] **AGG-04**: Application groups rows by campaign_id and computes total_conversions (sum)
+- [x] **AGG-05**: Application computes CTR = total_clicks / total_impressions per campaign
+- [x] **AGG-06**: Application computes CPA = total_spend / total_conversions per campaign
+- [x] **AGG-07**: Application handles CPA edge case: returns null/excludes campaigns with zero total_conversions
 
 ### Output
 
@@ -39,7 +39,7 @@
 ### Performance
 
 - [ ] **PERF-01**: Application processes a 1GB CSV file without OutOfMemoryError on default JVM heap
-- [ ] **PERF-02**: Application uses streaming I/O (not loading full file into memory)
+- [x] **PERF-02**: Application uses streaming I/O (not loading full file into memory)
 
 ## v2 Requirements
 
@@ -63,16 +63,16 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CSV-01 | Phase 2 | Pending |
-| CSV-02 | Phase 2 | Pending |
-| CSV-03 | Phase 2 | Pending |
-| AGG-01 | Phase 2 | Pending |
-| AGG-02 | Phase 2 | Pending |
-| AGG-03 | Phase 2 | Pending |
-| AGG-04 | Phase 2 | Pending |
-| AGG-05 | Phase 2 | Pending |
-| AGG-06 | Phase 2 | Pending |
-| AGG-07 | Phase 2 | Pending |
+| CSV-01 | Phase 2 | Complete (02-01) |
+| CSV-02 | Phase 2 | Complete (02-01) |
+| CSV-03 | Phase 2 | Complete (02-01) |
+| AGG-01 | Phase 2 | Complete (02-01) |
+| AGG-02 | Phase 2 | Complete (02-01) |
+| AGG-03 | Phase 2 | Complete (02-01) |
+| AGG-04 | Phase 2 | Complete (02-01) |
+| AGG-05 | Phase 2 | Complete (02-01) |
+| AGG-06 | Phase 2 | Complete (02-01) |
+| AGG-07 | Phase 2 | Complete (02-01) |
 | OUT-01 | Phase 3 | Pending |
 | OUT-02 | Phase 3 | Pending |
 | OUT-03 | Phase 3 | Pending |
@@ -83,7 +83,7 @@
 | CLI-04 | Phase 1 | Complete (01-02) |
 | CLI-05 | Phase 1 | Complete (01-01) |
 | PERF-01 | Phase 3 | Pending |
-| PERF-02 | Phase 2 | Pending |
+| PERF-02 | Phase 2 | Complete (02-01) |
 
 **Coverage:**
 - v1 requirements: 21 total
