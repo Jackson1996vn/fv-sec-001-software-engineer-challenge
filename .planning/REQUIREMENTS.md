@@ -38,7 +38,7 @@
 
 ### Performance
 
-- [ ] **PERF-01**: Application processes a 1GB CSV file without OutOfMemoryError on default JVM heap
+- [x] **PERF-01**: Application processes a 1GB CSV file without OutOfMemoryError on default JVM heap
 - [x] **PERF-02**: Application uses streaming I/O (not loading full file into memory)
 
 ## v2 Requirements
@@ -82,7 +82,7 @@
 | CLI-03 | Phase 1 | Complete (01-02) |
 | CLI-04 | Phase 1 | Complete (01-02) |
 | CLI-05 | Phase 1 | Complete (01-01) |
-| PERF-01 | Phase 3 | Pending |
+| PERF-01 | Phase 3 | Complete (03-02) |
 | PERF-02 | Phase 2 | Complete (02-01) |
 
 **Coverage:**

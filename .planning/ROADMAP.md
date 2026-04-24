@@ -8,7 +8,7 @@ This project delivers a Java 21 CLI application that streams large CSV files, ag
 
 - [x] **Phase 1: Project Setup and CLI Skeleton** - Gradle project with Picocli CLI that accepts arguments and packages as executable fat JAR
 - [x] **Phase 2: CSV Streaming and Aggregation** - Stream-parse CSV input and aggregate all metrics by campaign_id with derived CTR/CPA
-- [ ] **Phase 3: Ranked Output and Performance Validation** - Write top-10 CSV reports and validate memory-efficient processing on large files
+- [x] **Phase 3: Ranked Output and Performance Validation** - Write top-10 CSV reports and validate memory-efficient processing on large files
 
 ## Phase Details
 
@@ -51,11 +51,11 @@ Plans:
   2. Running the application produces top10_cpa.csv with the 10 lowest-CPA campaigns in ascending order, excluding zero-conversion campaigns, with headers and all metric columns
   3. Both output files appear in the directory specified by --output
   4. Application processes a 1GB CSV file without OutOfMemoryError on default JVM heap settings
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 03-01-PLAN.md — ReportWriter class with TDD: ranking logic and CSV output for top10_ctr.csv and top10_cpa.csv
-- [ ] 03-02-PLAN.md — Wire ReportWriter into App.java CLI and validate 1GB performance with -Xmx256m
+- [x] 03-02-PLAN.md — Wire ReportWriter into App.java CLI and validate 1GB performance with -Xmx256m
 
 ## Progress
 
@@ -63,4 +63,4 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Project Setup and CLI Skeleton | 2/2 | Complete    | 2026-04-24 |
 | 2. CSV Streaming and Aggregation | 2/2 | Complete    | 2026-04-24 |
-| 3. Ranked Output and Performance Validation | 1/2 | In progress | - |
+| 3. Ranked Output and Performance Validation | 2/2 | Complete    | 2026-04-24 |
