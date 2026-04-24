@@ -11,4 +11,3 @@ build/
 .DS_Store
 *.csv
 *.csv.zip
-results/

@@ -14,17 +14,19 @@ Correctly aggregate campaign metrics from a large CSV and produce accurate top-1
 
 - ✓ CLI interface with --input and --output flags — Phase 1
 - ✓ Packaged as executable JAR: `java -jar app.jar --input input.csv --output results/` — Phase 1
+- ✓ Read and parse large CSV files with streaming (not loading entire file into memory) — Phase 2
+- ✓ Aggregate metrics by campaign_id: total_impressions, total_clicks, total_spend, total_conversions — Phase 2
+- ✓ Compute derived metrics: CTR = total_clicks / total_impressions, CPA = total_spend / total_conversions — Phase 2
+- ✓ Handle CPA edge case: if total_conversions = 0, CPA is null/excluded — Phase 2
+
+- ✓ Output top10_ctr.csv: top 10 campaigns ranked by highest CTR — Phase 3
+- ✓ Output top10_cpa.csv: top 10 campaigns ranked by lowest CPA, excluding zero-conversion campaigns — Phase 3
+- ✓ Memory-efficient processing suitable for 1GB+ files — Phase 3 (validated with 256MB heap)
+- ✓ Good performance on large datasets — Phase 3 (1GB/19M rows in 18s)
 
 ### Active
 
-- [ ] Read and parse large CSV files (~1GB) with streaming (not loading entire file into memory)
-- [ ] Aggregate metrics by campaign_id: total_impressions, total_clicks, total_spend, total_conversions
-- [ ] Compute derived metrics: CTR = total_clicks / total_impressions, CPA = total_spend / total_conversions
-- [ ] Handle CPA edge case: if total_conversions = 0, CPA is null/excluded
-- [ ] Output top10_ctr.csv: top 10 campaigns ranked by highest CTR
-- [ ] Output top10_cpa.csv: top 10 campaigns ranked by lowest CPA, excluding zero-conversion campaigns
-- [ ] Memory-efficient processing suitable for 1GB+ files
-- [ ] Good performance on large datasets
+(All requirements validated)
 
 ### Out of Scope
 
@@ -77,4 +79,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-24 after Phase 1 completion*
+*Last updated: 2026-04-24 after Phase 3 completion — all phases complete*
