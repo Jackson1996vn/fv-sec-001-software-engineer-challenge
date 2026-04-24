@@ -1,7 +1,70 @@
 package com.campaign;
 
-public class App {
+import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Model.CommandSpec;
+import picocli.CommandLine.Option;
+import picocli.CommandLine.Spec;
+
+import java.io.File;
+import java.io.PrintWriter;
+import java.util.concurrent.Callable;
+
+@Command(
+    name = "campaign-csv-analyzer",
+    mixinStandardHelpOptions = true,
+    version = "1.0.0",
+    description = "Analyzes campaign CSV data and produces top-10 ranked reports."
+)
+public class App implements Callable<Integer> {
+
+    @Option(names = {"-i", "--input"}, required = true,
+            description = "Path to the input CSV file")
+    private File inputFile;
+
+    @Option(names = {"-o", "--output"}, required = true,
+            description = "Path to the output directory")
+    private File outputDir;
+
+    @Spec
+    private CommandSpec spec;
+
+    @Override
+    public Integer call() {
+        PrintWriter out = spec.commandLine().getOut();
+        PrintWriter err = spec.commandLine().getErr();
+
+        // Validate input file exists
+        if (!inputFile.exists()) {
+            err.println("Error: Input file does not exist: " + inputFile.getPath());
+            return 1;
+        }
+        if (!inputFile.isFile()) {
+            err.println("Error: Input path is not a file: " + inputFile.getPath());
+            return 1;
+        }
+
+        // Create output directory if it does not exist
+        if (!outputDir.exists()) {
+            boolean created = outputDir.mkdirs();
+            if (!created) {
+                err.println("Error: Could not create output directory: " + outputDir.getPath());
+                return 1;
+            }
+            out.println("Created output directory: " + outputDir.getPath());
+        } else if (!outputDir.isDirectory()) {
+            err.println("Error: Output path is not a directory: " + outputDir.getPath());
+            return 1;
+        }
+
+        out.println("Input: " + inputFile.getPath());
+        out.println("Output: " + outputDir.getPath());
+        out.println("Ready to process. (Processing not yet implemented)");
+        return 0;
+    }
+
     public static void main(String[] args) {
-        System.out.println("Campaign CSV Analyzer - use --help for usage");
+        int exitCode = new CommandLine(new App()).execute(args);
+        System.exit(exitCode);
     }
 }
