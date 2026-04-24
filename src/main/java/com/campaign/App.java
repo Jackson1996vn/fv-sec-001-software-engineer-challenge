@@ -66,14 +66,11 @@ public class App implements Callable<Integer> {
             Map<String, CampaignMetrics> results = CsvProcessor.process(inputFile);
             out.println("Processed " + results.size() + " campaigns.");
 
-            for (Map.Entry<String, CampaignMetrics> entry : results.entrySet()) {
-                String id = entry.getKey();
-                CampaignMetrics m = entry.getValue();
-                String cpaStr = m.getCpa() != null ? String.format("%.2f", m.getCpa()) : "N/A";
-                out.printf("  %s: impressions=%d, clicks=%d, spend=%.2f, conversions=%d, CTR=%.4f, CPA=%s%n",
-                    id, m.getTotalImpressions(), m.getTotalClicks(), m.getTotalSpend(),
-                    m.getTotalConversions(), m.getCtr(), cpaStr);
-            }
+            ReportWriter.writeTopCtr(results, outputDir);
+            out.println("Written: " + new File(outputDir, "top10_ctr.csv").getPath());
+
+            ReportWriter.writeTopCpa(results, outputDir);
+            out.println("Written: " + new File(outputDir, "top10_cpa.csv").getPath());
         } catch (IOException | IllegalArgumentException e) {
             err.println("Error processing CSV: " + e.getMessage());
             return 1;
