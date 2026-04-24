@@ -30,10 +30,10 @@
 
 ### CLI Interface
 
-- [ ] **CLI-01**: Application accepts --input flag for input CSV file path
-- [ ] **CLI-02**: Application accepts --output flag for output directory path
-- [ ] **CLI-03**: Application creates output directory if it does not exist
-- [ ] **CLI-04**: Application provides meaningful error messages for missing/invalid arguments
+- [x] **CLI-01**: Application accepts --input flag for input CSV file path
+- [x] **CLI-02**: Application accepts --output flag for output directory path
+- [x] **CLI-03**: Application creates output directory if it does not exist
+- [x] **CLI-04**: Application provides meaningful error messages for missing/invalid arguments
 - [x] **CLI-05**: Application is packaged as an executable fat JAR runnable via `java -jar`
 
 ### Performance
@@ -77,10 +77,10 @@
 | OUT-02 | Phase 3 | Pending |
 | OUT-03 | Phase 3 | Pending |
 | OUT-04 | Phase 3 | Pending |
-| CLI-01 | Phase 1 | Pending |
-| CLI-02 | Phase 1 | Pending |
-| CLI-03 | Phase 1 | Pending |
-| CLI-04 | Phase 1 | Pending |
+| CLI-01 | Phase 1 | Complete (01-02) |
+| CLI-02 | Phase 1 | Complete (01-02) |
+| CLI-03 | Phase 1 | Complete (01-02) |
+| CLI-04 | Phase 1 | Complete (01-02) |
 | CLI-05 | Phase 1 | Complete (01-01) |
 | PERF-01 | Phase 3 | Pending |
 | PERF-02 | Phase 2 | Pending |
