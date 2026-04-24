@@ -24,7 +24,7 @@ This project delivers a Java 21 CLI application that streams large CSV files, ag
 **Plans:** 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Initialize Gradle project with dependencies, shadow plugin, and fat JAR packaging
+- [x] 01-01-PLAN.md — Initialize Gradle project with dependencies, shadow plugin, and fat JAR packaging
 - [ ] 01-02-PLAN.md — Implement Picocli CLI with --input/--output parsing, validation, and tests
 
 ### Phase 2: CSV Streaming and Aggregation
@@ -59,6 +59,6 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Setup and CLI Skeleton | 0/2 | Not started | - |
+| 1. Project Setup and CLI Skeleton | 1/2 | In progress | - |
 | 2. CSV Streaming and Aggregation | 0/1 | Not started | - |
 | 3. Ranked Output and Performance Validation | 0/1 | Not started | - |
