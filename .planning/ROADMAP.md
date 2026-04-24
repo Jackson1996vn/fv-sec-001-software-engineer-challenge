@@ -7,7 +7,7 @@ This project delivers a Java 21 CLI application that streams large CSV files, ag
 ## Phases
 
 - [x] **Phase 1: Project Setup and CLI Skeleton** - Gradle project with Picocli CLI that accepts arguments and packages as executable fat JAR
-- [ ] **Phase 2: CSV Streaming and Aggregation** - Stream-parse CSV input and aggregate all metrics by campaign_id with derived CTR/CPA
+- [x] **Phase 2: CSV Streaming and Aggregation** - Stream-parse CSV input and aggregate all metrics by campaign_id with derived CTR/CPA
 - [ ] **Phase 3: Ranked Output and Performance Validation** - Write top-10 CSV reports and validate memory-efficient processing on large files
 
 ## Phase Details
@@ -36,11 +36,11 @@ Plans:
   2. Application correctly sums impressions, clicks, spend, and conversions per campaign_id across multiple date rows
   3. Application computes CTR (clicks/impressions) and CPA (spend/conversions) correctly for each campaign
   4. Campaigns with zero total conversions have CPA excluded (null), not divided-by-zero
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 02-01-PLAN.md — CampaignMetrics accumulator and CsvProcessor streaming parser with TDD
-- [ ] 02-02-PLAN.md — Wire CsvProcessor into App.java CLI with integration tests
+- [x] 02-02-PLAN.md — Wire CsvProcessor into App.java CLI with integration tests
 
 ### Phase 3: Ranked Output and Performance Validation
 **Goal**: Application produces correctly ranked top-10 CSV output files and handles gigabyte-scale input without memory issues
@@ -61,5 +61,5 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Setup and CLI Skeleton | 2/2 | Complete    | 2026-04-24 |
-| 2. CSV Streaming and Aggregation | 1/2 | In progress | - |
+| 2. CSV Streaming and Aggregation | 2/2 | Complete    | 2026-04-24 |
 | 3. Ranked Output and Performance Validation | 0/1 | Not started | - |
