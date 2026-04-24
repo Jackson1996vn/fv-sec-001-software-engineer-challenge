@@ -23,10 +23,10 @@
 
 ### Output
 
-- [ ] **OUT-01**: Application writes top10_ctr.csv containing top 10 campaigns ranked by highest CTR
-- [ ] **OUT-02**: Application writes top10_cpa.csv containing top 10 campaigns ranked by lowest CPA, excluding zero-conversion campaigns
-- [ ] **OUT-03**: Output files are written to the directory specified via --output flag
-- [ ] **OUT-04**: Output CSVs include headers and all aggregated metric columns
+- [x] **OUT-01**: Application writes top10_ctr.csv containing top 10 campaigns ranked by highest CTR
+- [x] **OUT-02**: Application writes top10_cpa.csv containing top 10 campaigns ranked by lowest CPA, excluding zero-conversion campaigns
+- [x] **OUT-03**: Output files are written to the directory specified via --output flag
+- [x] **OUT-04**: Output CSVs include headers and all aggregated metric columns
 
 ### CLI Interface
 
@@ -73,10 +73,10 @@
 | AGG-05 | Phase 2 | Complete (02-01) |
 | AGG-06 | Phase 2 | Complete (02-01) |
 | AGG-07 | Phase 2 | Complete (02-01) |
-| OUT-01 | Phase 3 | Pending |
-| OUT-02 | Phase 3 | Pending |
-| OUT-03 | Phase 3 | Pending |
-| OUT-04 | Phase 3 | Pending |
+| OUT-01 | Phase 3 | Complete (03-01) |
+| OUT-02 | Phase 3 | Complete (03-01) |
+| OUT-03 | Phase 3 | Complete (03-01) |
+| OUT-04 | Phase 3 | Complete (03-01) |
 | CLI-01 | Phase 1 | Complete (01-02) |
 | CLI-02 | Phase 1 | Complete (01-02) |
 | CLI-03 | Phase 1 | Complete (01-02) |
