@@ -38,5 +38,15 @@ shadowJar {
 }
 
 tasks.named('test') {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        excludeTags 'performance'
+    }
+}
+
+tasks.register('performanceTest', Test) {
+    useJUnitPlatform {
+        includeTags 'performance'
+    }
+    jvmArgs '-Xmx256m'
+    timeout = java.time.Duration.ofMinutes(5)
 }
